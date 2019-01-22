@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 const AnimatedSvg = Animated.createAnimatedComponent(Svg);
 const { interpolate } = require('d3-interpolate');
 
-const { width } = Dimensions.get('window');
+const screenWidth = Dimensions.get('window').width;
 
 class ContentLoader extends Component {
   constructor(props) {
@@ -165,7 +165,7 @@ ContentLoader.defaultProps = {
   primaryColor: '#eeeeee',
   secondaryColor: '#dddddd',
   duration: 2000,
-  width: 300,
+  width: screenWidth,
   height: 200,
   x1: '0',
   y1: '0',
